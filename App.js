@@ -23,6 +23,7 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import Hello from './Hello';
 
 const App: () => React$Node = () => {
   return (
@@ -79,6 +80,5 @@ const boxStyle3 = StyleSheet.create({
 const boxStyle4 = StyleSheet.compose(boxStyle3.box, {
   backgroundColor: 'rgba(255,0,255,0.3)',
 });
-
 
 export default App;
