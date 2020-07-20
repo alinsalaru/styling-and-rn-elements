@@ -29,88 +29,56 @@ const App: () => React$Node = () => {
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
-          <Header />
-          {global.HermesInternal == null ? null : (
-            <View style={styles.engine}>
-              <Text style={styles.footer}>Engine: Hermes</Text>
-            </View>
-          )}
-          <View style={styles.body}>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Step One</Text>
-              <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.js</Text> to change this
-                screen and then come back to see your edits.
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>See Your Changes</Text>
-              <Text style={styles.sectionDescription}>
-                <ReloadInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Debug</Text>
-              <Text style={styles.sectionDescription}>
-                <DebugInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Learn More</Text>
-              <Text style={styles.sectionDescription}>
-                Read the docs to discover what to do next:
-              </Text>
-            </View>
-            <LearnMoreLinks />
+        <View style={general.body}>
+          <View style={boxStyle.box}>
+            <Hello />
           </View>
-        </ScrollView>
-
-
+          <View style={boxStyle2.box}>
+            <Hello />
+          </View>
+          <View style={boxStyle3.box}>
+            <Hello />
+          </View>
+        </View>
       </SafeAreaView>
     </>
   );
 };
 
-const styles = StyleSheet.create({
-  scrollView: {
-    backgroundColor: Colors.lighter,
-  },
-  engine: {
-    position: 'absolute',
-    right: 0,
-  },
+const general = StyleSheet.create({
   body: {
-    backgroundColor: Colors.white,
-  },
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-    color: Colors.black,
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-    color: Colors.dark,
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-  footer: {
-    color: Colors.dark,
-    fontSize: 12,
-    fontWeight: '600',
-    padding: 4,
-    paddingRight: 12,
-    textAlign: 'right',
+    height: '100%',
+    alignContent: 'center',
+    justifyContent: 'center',
   },
 });
+
+const boxStyle = StyleSheet.create({
+  box: {
+    flexGrow: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'rgba(255,0,0,0.3)',
+  },
+});
+
+const boxStyle2 = StyleSheet.create({
+  box: {
+    ...boxStyle.box,
+    backgroundColor: 'rgba(0,255,0,0.3)',
+  },
+});
+
+const boxStyle3 = StyleSheet.create({
+  box: {
+    ...boxStyle.box,
+    backgroundColor: 'rgba(0,0,255,0.3)',
+  },
+});
+
+const boxStyle4 = StyleSheet.compose(boxStyle3.box, {
+  backgroundColor: 'rgba(255,0,255,0.3)',
+});
+
 
 export default App;
