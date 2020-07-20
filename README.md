@@ -3,9 +3,9 @@ App created with ``npx react-native init`` . Detailed info [here](https://reactn
 Make sure to install required dependecies by running ``yarn`` or ``yarn install`` and to install cocoapods dependecies with ``pod install`` from ``/ios`` folder, in order it with iOS simulator.
 
 
-[Exercise with styling](alinsalaru/styling-and-rn-elements/tree/styling)
+[Exercise with styling](./alinsalaru/styling-and-rn-elements/tree/styling)
 
 
-[Exercise with React Native Elements](alinsalaru/styling-and-rn-elements/tree/rn-elems)
+[Exercise with React Native Elements](./alinsalaru/styling-and-rn-elements/tree/rn-elems)
 
 
