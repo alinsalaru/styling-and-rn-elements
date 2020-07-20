@@ -4,6 +4,8 @@ Make sure to install required dependecies by running ``yarn`` or ``yarn install`
 
 
 [Exercise with styling](/alinsalaru/styling-and-rn-elements/tree/styling)
+
+
 [Exercise with React Native Elements](/alinsalaru/styling-and-rn-elements/tree/rn-elems)
 
 
